@@ -15,7 +15,7 @@
 #
 
 from cuml.model_selection._split import train_test_split
-from cuml.model_selection._split import StratifiedKFold
+from cuml.model_selection._split import KFold, StratifiedKFold
 from cuml.internals.import_utils import has_sklearn
 
 if has_sklearn():
