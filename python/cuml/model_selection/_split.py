@@ -458,11 +458,9 @@ def _check_rs_type(rs):
         ),
     ):
         raise ValueError(
-            f"random_state {rs} should either be an integer/"
+            f"random_state {rs} should an integer/"
             f"/{type(np.random.Generator)}/{type(np.random.RandomState)}"
-            f"/{type(np.random.Generator)}"
             f"/{type(cp.random.Generator)}/{type(cp.random.RandomState)}"
-            f"/{type(cp.random.Generator)}."
         )
 
 
