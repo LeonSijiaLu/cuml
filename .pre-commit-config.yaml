@@ -78,7 +78,8 @@ repos:
                 setup[.]cfg$
           exclude: |
             (?x)
-                cpp/src/tsne/cannylab/bh[.]cu$
+                cpp/src/tsne/cannylab/bh[.]cu$|
+                python/cuml/_thirdparty/
 
 default_language_version:
     python: python3
