@@ -59,13 +59,8 @@ repos:
                 - cpp/test
             pass_filenames: false
             language: python
-    - repo: https://github.com/rapidsai/dependency-file-generator
-      rev: v1.13.11
-      hooks:
-          - id: rapids-dependency-file-generator
-            args: ["--clean"]
     - repo: https://github.com/rapidsai/pre-commit-hooks
-      rev: v0.0.3
+      rev: v0.2.0
       hooks:
         - id: verify-copyright
           files: |
@@ -80,6 +75,12 @@ repos:
             (?x)
                 cpp/src/tsne/cannylab/bh[.]cu$|
                 python/cuml/_thirdparty/
+        - id: verify-alpha-spec
+    - repo: https://github.com/rapidsai/dependency-file-generator
+      rev: v1.13.11
+      hooks:
+          - id: rapids-dependency-file-generator
+            args: ["--clean"]
 
 default_language_version:
     python: python3
